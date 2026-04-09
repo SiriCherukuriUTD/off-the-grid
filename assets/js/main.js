@@ -2,12 +2,9 @@
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 let divs = document.querySelectorAll(".grid-container div");
-
 function randomize() {
     console.log(divs.length, "randomize!");
-
     divs.forEach(function (div) {
         let scale = randomNumber(.5, 1.2);
         let translateX = randomNumber(0, 50);
@@ -22,5 +19,4 @@ function randomize() {
         div.style.transform = `scale(${scale}) translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
     });
 }
-
 document.addEventListener("click", randomize);
